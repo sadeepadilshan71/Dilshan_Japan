@@ -165,6 +165,7 @@ skipBtn.addEventListener('click', () => {
   
   // Also disable submit and skip to force user to submit or skip
   answerForm.querySelector('.submitBtn').disabled = true;
+  skipBtn.disabled = true;
 
   currentIndex++;
   setTimeout(() => { // Longer delay for skiped answers
