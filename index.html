@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz - English-Japanese Vocabulary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="quiz-header">
+      <h1>Kanji Quiz</h1>
+      <span id="quizProgress" class="quiz-progress"></span>
+    </div>
+    <section id="quizSection">
+      <div id="wordDisplay" aria-live="polite"></div>
+      <form id="answerForm">
+        <label for="answerInput" id="answerLabel">Your answer:</label>
+        <input type="text" id="answerInput" autocomplete="off" />
+        <div id="feedback" aria-live="assertive" style="min-height:1.2em;"></div>
+        <div class="buttons">
+          <button type="submit" class="btn submitBtn">Submit</button>
+          <button type="button" id="skipBtn" class="btn">Skip</button>
+          <button type="button" id="hintBtn" class="btn hintBtn">Hint</button>
+          <button type="button" id="backBtn" class="btn">Restart</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="words.js"></script>
+  <script src="action.js"></script>
+</body>
+</html>

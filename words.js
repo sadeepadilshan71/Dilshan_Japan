@@ -1,0 +1,58 @@
+// words.js
+
+// Structure: 
+// Each word object:
+// { kanji: '', hiragana: '', romaji: '', english: '', type: 'kanji' }
+
+// Sample words - you can expand this list as needed
+const words = [
+  // Kanji
+  { kanji: '人', hiragana: 'ひと', romaji: 'hito', english: 'person', type: 'kanji' },
+  { kanji: 'スリランカ人', hiragana: 'スリランカじん', romaji: 'surirankajin', english: 'Sri Lankan', type: 'kanji' },
+  { kanji: '一人', hiragana: 'ひとり', romaji: 'hitori', english: 'one person', type: 'kanji' },
+  { kanji: '二人', hiragana: 'ふたり', romaji: 'futari', english: 'two persons', type: 'kanji' },
+  { kanji: '三人', hiragana: 'さんにん', romaji: 'sannin', english: 'three persons', type: 'kanji' },
+  { kanji: '男の人', hiragana: 'おとこのひと', romaji: 'otokonohito', english: 'man', type: 'kanji' },
+  { kanji: '女の人', hiragana: 'おんなのひと', romaji: 'onnanohito', english: 'woman', type: 'kanji' },
+  { kanji: 'こい人', hiragana: 'こいびと', romaji: 'koibito', english: 'lover', type: 'kanji' },
+  { kanji: '木', hiragana: 'き', romaji: 'ki', english: 'tree', type: 'kanji' },
+  { kanji: '木曜日', hiragana: 'もくようび', romaji: 'mokuyoubi', english: 'Thursday', type: 'kanji' },
+  { kanji: '川', hiragana: 'かわ', romaji: 'kawa', english: 'river', type: 'kanji' },
+  { kanji: '山川', hiragana: 'さんせん', romaji: 'sansen', english: 'mountains and rivers', type: 'kanji' },
+  { kanji: '川さき', hiragana: 'かわさき', romaji: 'kawasaki', english: 'river cape', type: 'kanji' },
+  { kanji: '山', hiragana: 'やま', romaji: 'yama', english: 'mountain', type: 'kanji' },
+  { kanji: '山みち', hiragana: 'やまみち', romaji: 'yamamichi', english: 'mountain road', type: 'kanji' },
+  { kanji: 'ふじ山', hiragana: 'ふじさん', romaji: 'fujisan', english: 'Mount Fuji', type: 'kanji' },
+  { kanji: '火山', hiragana: 'かざん', romaji: 'kazan', english: 'volcano', type: 'kanji' },
+  { kanji: '女の子', hiragana: 'おんなのこ', romaji: 'onnanoko', english: 'girl', type: 'kanji' },
+  { kanji: '男の子', hiragana: 'おとこのこ', romaji: 'otokonoko', english: 'boy', type: 'kanji' },
+  { kanji: '女子', hiragana: 'じょし', romaji: 'joshi', english: 'girl', type: 'kanji' },
+  { kanji: '男子', hiragana: 'だんし', romaji: 'danshi', english: 'boy', type: 'kanji' },
+  { kanji: '日', hiragana: 'ひ', romaji: 'hi', english: ['sun', 'day'], type: 'kanji' },
+  { kanji: '休みの日', hiragana: 'やすみのひ', romaji: 'yasuminohi', english: 'day off', type: 'kanji' },
+  { kanji: 'いち日', hiragana: 'いちにち', romaji: 'ichinichi', english: 'one day', type: 'kanji' },
+  { kanji: '毎日', hiragana: 'まいにち', romaji: 'mainichi', english: 'every day', type: 'kanji' },
+  { kanji: '休日', hiragana: 'きゅうじつ', romaji: 'kyuujitsu', english: 'holiday', type: 'kanji' },
+  { kanji: 'たんじょ日', hiragana: 'たんじょうび', romaji: 'tanjoubi', english: 'birthday', type: 'kanji' },
+  { kanji: '本', hiragana: 'ほん', romaji: 'hon', english: 'book', type: 'kanji' },
+  { kanji: '日本', hiragana: 'にほん', romaji: 'nihon', english: 'Japan', type: 'kanji' },
+  { kanji: '本とう', hiragana: 'ほんとう', romaji: 'hontou', english: 'true', type: 'kanji' },
+  { kanji: '本てん', hiragana: 'ほんてん', romaji: 'honten', english: 'head office', type: 'kanji' },
+  { kanji: '二本', hiragana: 'にほん', romaji: 'nihon', english: 'two long things', type: 'kanji' },
+  { kanji: '山本', hiragana: 'やまもと', romaji: 'yamamoto', english: 'mountain base', type: 'kanji' },
+  { kanji: '雨', hiragana: 'あめ', romaji: 'ame', english: 'rain', type: 'kanji' },
+  { kanji: '雨水', hiragana: 'あまみず', romaji: 'amamizu', english: 'rain water', type: 'kanji' },
+  { kanji: '一', hiragana: 'いち', romaji: 'ichi', english: 'one', type: 'kanji' },
+  { kanji: '一つ', hiragana: 'ひとつ', romaji: 'hitotsu', english: 'one thing', type: 'kanji' },
+  { kanji: '一日', hiragana: 'ついたち', romaji: 'tsuitachi', english: 'first day of the month', type: 'kanji' },
+  { kanji: '一本', hiragana: 'いっぽん', romaji: 'ippon', english: 'one long thing', type: 'kanji' },
+  { kanji: '二', hiragana: 'に', romaji: 'ni', english: 'two', type: 'kanji' },
+  { kanji: '二日', hiragana: 'ふつか', romaji: 'futsuka', english: 'second day of the month', type: 'kanji' },
+  { kanji: '二だい', hiragana: 'にだい', romaji: 'nidai', english: 'two machines', type: 'kanji' },
+  { kanji: '三', hiragana: 'さん', romaji: 'san', english: 'three', type: 'kanji' },
+  { kanji: '三日', hiragana: 'みっか', romaji: 'mikka', english: 'third day of the month', type: 'kanji' },
+  { kanji: '四', hiragana: ['よん' , 'し'], romaji: ['yon' , 'shi'], english: 'four', type: 'kanji' },
+  { kanji: '四日', hiragana: 'よっか', romaji: 'yokka', english: 'fourth day of the month', type: 'kanji' },
+  { kanji: '四き', hiragana: 'しき', romaji: 'shiki', english: 'four seasons', type: 'kanji' },
+  { kanji: '十', hiragana: 'じゅう', romaji: 'juu', english: 'ten', type: 'kanji' },
+];
