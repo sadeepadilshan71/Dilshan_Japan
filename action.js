@@ -140,12 +140,12 @@ answerForm.addEventListener('submit', function (e) {
 });
 
 // Handle skip button
-skipBtn.addEventListener('click', () => {
+skipBtn.addEventListener('click', () => {  
   // Disable submit, skip and hint to force user to submit or skip
   answerForm.querySelector('.submitBtn').disabled = true;
   skipBtn.disabled = true;
   hintBtn.disabled = true;
-  
+
   const currentWord = filteredWords[currentIndex];
   if (selectedQuizType === 'k2h') {
     let romajiToShow = Array.isArray(currentWord.romaji)
@@ -159,8 +159,7 @@ skipBtn.addEventListener('click', () => {
     let englishToShow = Array.isArray(currentWord.english)
       ? currentWord.english.join(', ')
       : currentWord.english;
-    
-      
+
     feedback.style.color = '#ff9659ff';
     feedback.innerHTML = `<small>Answer: </small> <strong>${hiraganaToShow} (${romajiToShow}) (${englishToShow})</strong>`;
   }
