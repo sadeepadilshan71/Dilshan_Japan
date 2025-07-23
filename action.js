@@ -141,8 +141,11 @@ answerForm.addEventListener('submit', function (e) {
 
 // Handle skip button
 skipBtn.addEventListener('click', () => {
-  
+  // Disable submit, skip and hint to force user to submit or skip
+  answerForm.querySelector('.submitBtn').disabled = true;
   skipBtn.disabled = true;
+  hintBtn.disabled = true;
+  
   const currentWord = filteredWords[currentIndex];
   if (selectedQuizType === 'k2h') {
     let romajiToShow = Array.isArray(currentWord.romaji)
@@ -164,9 +167,6 @@ skipBtn.addEventListener('click', () => {
   else {
     /* nothing here */
   }
-  
-  // Also disable submit and skip to force user to submit or skip
-  answerForm.querySelector('.submitBtn').disabled = true;
 
   currentIndex++;
   setTimeout(() => { // Longer delay for skiped answers
